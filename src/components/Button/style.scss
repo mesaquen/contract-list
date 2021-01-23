@@ -1,0 +1,40 @@
+@import '../../shared/commonStyles.scss';
+
+.button {
+    padding: 0.8rem 1rem;
+    border-width: 2px;
+    border-color: transparent;
+    border-style: solid;
+    font-size: 0.875rem;
+    border-radius: 0.25rem;
+    background-color: var(--white);
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--primary-main-titles);
+
+    &:hover {
+        background-color: var(--white-hover);
+        box-shadow: 0 0.2rem 0.125rem var(--shadow)
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    transition: all 0.3s ease-in-out;
+
+}
+
+.raised {
+    border-color: var(--primary-yellow)
+}
+
+.primary {
+    background-color: var(--primary-yellow);
+
+    &:hover {
+        background-color: var(--primary-hover);
+        border-color: var(--primary-hover);
+    }
+}
+

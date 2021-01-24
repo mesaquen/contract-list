@@ -1,4 +1,4 @@
-import './App.scss';
+import './App.scss'
 import Button from './components/Button'
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
       <Button raised>raised</Button>
       <Button primary>primary</Button>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

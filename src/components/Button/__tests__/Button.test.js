@@ -6,7 +6,7 @@ describe('Button', () => {
   test('callback is called when clicked', async () => {
     const callback = jest.fn(() => null)
     render(
-      <Button data-testid='button' onClick={callback}>
+      <Button data-testid="button" onClick={callback}>
         sample
       </Button>
     )
@@ -16,22 +16,18 @@ describe('Button', () => {
   })
 
   test('text is rendered', async () => {
-    render(
-      <Button data-testid='button'>
-        sample
-      </Button>
-    )
+    render(<Button data-testid="button">sample</Button>)
     const element = await screen.findByText('sample')
     expect(element).toBeInTheDocument()
   })
 
-  test('match snapshot when raised',  () => {
-      const {asFragment} = render(<Button raised>RaisedButton</Button>)
-      expect(asFragment()).toMatchSnapshot()
+  test('match snapshot when raised', () => {
+    const { asFragment } = render(<Button raised>RaisedButton</Button>)
+    expect(asFragment()).toMatchSnapshot()
   })
 
-  test('match snapshot when primary',  () => {
-    const {asFragment} = render(<Button primary>PrimaryButton</Button>)
+  test('match snapshot when primary', () => {
+    const { asFragment } = render(<Button primary>PrimaryButton</Button>)
     expect(asFragment()).toMatchSnapshot()
-})
+  })
 })

@@ -6,16 +6,20 @@ import './style.scss'
 const Button = ({ children, raised, primary, ...props }) => {
   const classNames = cx(['button'], {
     raised: raised || primary,
-    primary
+    primary,
   })
-  
-  return <button className={classNames} {...props}>{children}</button>
+
+  return (
+    <button className={classNames} {...props}>
+      {children}
+    </button>
+  )
 }
 
 Button.propTypes = {
-    primary: PropTypes.bool,
-    raised: PropTypes.bool,
-    children: PropTypes.node
+  primary: PropTypes.bool,
+  raised: PropTypes.bool,
+  children: PropTypes.node,
 }
 
 export default Button

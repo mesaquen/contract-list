@@ -12,8 +12,8 @@ const SIZES = {
 }
 
 const VARIANTS = {
-    PRIMARY: 'primary',
-    SECONDARY: 'secondary'
+  PRIMARY: 'primary',
+  SECONDARY: 'secondary',
 }
 
 const Typography = ({ children, size, bold, variant, ...props }) => {
@@ -24,9 +24,9 @@ const Typography = ({ children, size, bold, variant, ...props }) => {
     'typo--s': size === SIZES.s,
     'typo--xs': size === SIZES.xs,
     'typo--bold': bold,
-    [`typo--text-${variant}`]: true
+    [`typo--text-${variant}`]: true,
   }
-  
+
   const classNames = cx(styles)
   return (
     <span className={classNames} {...props}>
@@ -38,12 +38,12 @@ const Typography = ({ children, size, bold, variant, ...props }) => {
 Typography.propTypes = {
   children: PropTypes.node,
   size: PropTypes.oneOf(Object.values(SIZES)),
-  variant: PropTypes.oneOf(Object.values(VARIANTS))
+  variant: PropTypes.oneOf(Object.values(VARIANTS)),
 }
 
 Typography.defaultProps = {
   size: SIZES.m,
-  variant: 'primary'
+  variant: 'primary',
 }
 
 Typography.XL = SIZES.xl

@@ -4,10 +4,11 @@ import { MdInfo } from 'react-icons/md'
 import './styles.scss'
 
 const InfoIcon = ({ info, size, ...props }) => {
-    
-  return <span title={info}>
-      <MdInfo className='infoIcon--icon' size={size} />
-  </span>
+  return (
+    <span title={info}>
+      <MdInfo className="infoIcon--icon" size={size} />
+    </span>
+  )
 }
 
 InfoIcon.propTypes = {

@@ -5,7 +5,7 @@ beforeEach(cleanup)
 
 describe('InfoIcon', () => {
   test('Matches snapshot', () => {
-    const { asFragment } = render(<InfoIcon info='Sample info' />)
+    const { asFragment } = render(<InfoIcon info="Sample info" />)
     expect(asFragment()).toMatchSnapshot()
   })
 })

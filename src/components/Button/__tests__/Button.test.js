@@ -24,4 +24,14 @@ describe('Button', () => {
     const element = await screen.findByText('sample')
     expect(element).toBeInTheDocument()
   })
+
+  test('match snapshot when raised',  () => {
+      const {asFragment} = render(<Button raised>RaisedButton</Button>)
+      expect(asFragment()).toMatchSnapshot()
+  })
+
+  test('match snapshot when primary',  () => {
+    const {asFragment} = render(<Button primary>PrimaryButton</Button>)
+    expect(asFragment()).toMatchSnapshot()
+})
 })

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button match snapshot when primary 1`] = `
+<DocumentFragment>
+  <button
+    class="button raised primary"
+  >
+    PrimaryButton
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Button match snapshot when raised 1`] = `
+<DocumentFragment>
+  <button
+    class="button raised"
+  >
+    RaisedButton
+  </button>
+</DocumentFragment>
+`;

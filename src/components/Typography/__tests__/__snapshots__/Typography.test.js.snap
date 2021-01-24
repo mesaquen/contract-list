@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Typography renders corrent class when bold 1`] = `
+<DocumentFragment>
+  <span
+    class="typo--m typo--bold typo--text-primary"
+  >
+    Sample
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Typography renders corrent class when secondary 1`] = `
+<DocumentFragment>
+  <span
+    class="typo--m typo--text-secondary"
+  >
+    Sample
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Typography renders corrent class when size L 1`] = `
+<DocumentFragment>
+  <span
+    class="typo--l typo--text-primary"
+  >
+    Sample
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Typography renders corrent class when size M 1`] = `
+<DocumentFragment>
+  <span
+    class="typo--m typo--text-primary"
+  >
+    Sample
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Typography renders corrent class when size S 1`] = `
+<DocumentFragment>
+  <span
+    class="typo--s typo--text-primary"
+  >
+    Sample
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Typography renders corrent class when size XL 1`] = `
+<DocumentFragment>
+  <span
+    class="typo--xl typo--text-primary"
+  >
+    Sample
+  </span>
+</DocumentFragment>
+`;
+
+exports[`Typography renders corrent class when size XS 1`] = `
+<DocumentFragment>
+  <span
+    class="typo--xs typo--text-primary"
+  >
+    Sample
+  </span>
+</DocumentFragment>
+`;

@@ -1,0 +1,15 @@
+.iconMessage--container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.iconMessage--icon {
+  margin-right: 1rem;
+  flex-shrink: 0;
+  color: var(--primary-yellow);
+}
+
+.iconMessage--message {
+  text-align: left;
+}

@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumbs matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="breadcrumb--container"
+  >
+    <div
+      class="breadcrumb--item"
+    >
+      <span
+        class="typo--s typo--text-secondary"
+      >
+        Page1
+      </span>
+    </div>
+    <div
+      class="breadcrumb--item"
+    >
+      <svg
+        class="breadcrumb--separator"
+        fill="currentColor"
+        height="1.25rem"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 24 24"
+        width="1.25rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+        />
+      </svg>
+      <span
+        class="typo--s typo--bold typo--text-secondary"
+      >
+        Page2
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

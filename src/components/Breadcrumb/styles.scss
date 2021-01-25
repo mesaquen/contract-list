@@ -1,0 +1,13 @@
+.breadcrumb--container {
+  display: flex;
+}
+
+.breadcrumb--item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb--separator {
+  margin: 0 0.5rem;
+  color: var(--secondary-yellow);
+}

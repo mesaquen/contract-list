@@ -8,25 +8,20 @@ import StepHeader from './components/StepHeader'
 import { getSteps } from './logic/StepLogic'
 import IntlProvider from './lang/IntlProvider'
 import { useIntl, FormattedMessage } from 'react-intl'
+import InfoLabel from './components/InfoLabel'
 
 function AppContainer() {
   const intl = useIntl()
+  const fm = id => intl.formatMessage({ id })
   const steps = getSteps().map(step => ({
     ...step,
-    title: intl.formatMessage({ id: step.title }),
-    subtitle: step.subtitle
-      ? `(${intl.formatMessage({ id: step.subtitle })})`
-      : null,
+    title: fm(step.title),
+    subtitle: step.subtitle ? `(${fm(step.subtitle)})` : null,
   }))
   return (
     <div className="App">
       <div style={{ width: '80vw', margin: '0 auto' }}>
-        <Breadcrumbs
-          data={[
-            intl.formatMessage({ id: 'merchant.label' }),
-            intl.formatMessage({ id: 'new.application' }),
-          ]}
-        />
+        <Breadcrumbs data={[fm('merchant.label'), fm('new.application')]} />
         <StepHeader data={steps} current={3} />
         <Card>
           <Typography>
@@ -41,6 +36,10 @@ function AppContainer() {
           <Button primary>
             <FormattedMessage id="primary.button" />
           </Button>
+          <InfoLabel
+            label={fm('select.contract')}
+            info={fm('select.contract.info')}
+          />
         </Card>
       </div>
     </div>

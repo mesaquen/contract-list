@@ -5,5 +5,7 @@
   "business.info": "Business Info",
   "processing.rates": "Processing Rates & Fees",
   "agents.buy.rate": "Agents Buy Rate",
-  "optional": "Optional"
+  "optional": "Optional",
+  "select.contract": "Select a contract type",
+  "select.contract.info": "Explanation on what is a Buy Rate Contract."
 }

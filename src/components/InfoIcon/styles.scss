@@ -1,8 +1,8 @@
 .infoIcon--icon {
-    color: var(--primary-yellow);
-    cursor: pointer;
-    
-    &:hover {
-      color: var(--primary-main-titles)
-    }
+  color: var(--secondary-yellow);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--primary-main-titles);
+  }
 }

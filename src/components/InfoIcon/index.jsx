@@ -5,7 +5,7 @@ import './styles.scss'
 
 const InfoIcon = ({ info, size, ...props }) => {
   return (
-    <span title={info}>
+    <span title={info} {...props}>
       <MdInfo className="infoIcon--icon" size={size} />
     </span>
   )

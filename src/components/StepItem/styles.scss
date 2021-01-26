@@ -1,0 +1,26 @@
+.stepItem--typo-left-spaced {
+  margin-left: 0.5rem;
+}
+
+.stepItem--typo {
+  color: var(--secondary-text-icons);
+}
+
+.stepItem--container {
+  display: flex;
+  align-items: center;
+  border-radius: var(--roundness);
+  padding: 0.125rem 0.5rem;
+}
+
+.stepItem--container-active {
+  background: var(--accent-color);
+}
+
+.stepItem-accent {
+  color: var(--accent-color);
+}
+
+.stepItem-white {
+  color: var(--white);
+}

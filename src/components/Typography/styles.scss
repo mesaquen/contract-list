@@ -18,14 +18,22 @@
   font-size: 0.8125rem;
 }
 
+.typo--xxs {
+  font-size: 0.6875rem;
+}
+
 .typo--bold {
-    font-weight: bold;
+  font-weight: bold;
+}
+
+.typo--semi {
+  font-weight: 600;
 }
 
 .typo--text-primary {
-    color: var(--primary-main-titles)
+  color: var(--primary-main-titles);
 }
 
 .typo--text-secondary {
-    color: var(--secondary-text-icons)
+  color: var(--secondary-text-icons);
 }

@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StepHeader renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="stepheader--card card--container card--container-round"
+    data-testid="steps"
+  >
+    <div
+      class="stepItem--container"
+      data-testid="steps-item"
+    >
+      <svg
+        class="stepItem-accent"
+        fill="currentColor"
+        height="0.75rem"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 512 512"
+        width="0.75rem"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+        />
+      </svg>
+      <span
+        class="typo--xs typo--semi typo--text-primary stepItem--typo-left-spaced stepItem-accent"
+      >
+        step 1
+      </span>
+    </div>
+    <div
+      class="stepItem--container stepItem--container-active"
+      data-testid="steps-item"
+    >
+      <span
+        class="typo--m typo--bold typo--text-primary stepItem-white"
+      >
+        2
+      </span>
+      <span
+        class="typo--xs typo--semi typo--text-primary stepItem--typo-left-spaced stepItem-white"
+      >
+        step 2
+      </span>
+      <span
+        class="typo--xxs typo--text-primary stepItem--typo-left-spaced stepItem-white"
+      >
+        step 2 subtitle
+      </span>
+    </div>
+    <div
+      class="stepItem--container"
+      data-testid="steps-item"
+    >
+      <span
+        class="typo--m typo--bold typo--text-primary stepItem-accent"
+      >
+        3
+      </span>
+      <span
+        class="typo--xs typo--semi typo--text-primary stepItem--typo-left-spaced stepItem-accent"
+      >
+        step 3
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

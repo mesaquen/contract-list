@@ -20,7 +20,7 @@ exports[`IconMessage renders correctly and match snapshot 1`] = `
       />
     </svg>
     <span
-      class="iconMessage--message typo--s typo--text-primary"
+      class="typo--s typo--text-primary iconMessage--message"
     >
       Sample
     </span>

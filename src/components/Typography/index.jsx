@@ -9,6 +9,7 @@ const SIZES = {
   m: 'm',
   s: 's',
   xs: 'xs',
+  xxs: 'xxs',
 }
 
 const VARIANTS = {
@@ -16,18 +17,28 @@ const VARIANTS = {
   SECONDARY: 'secondary',
 }
 
-const Typography = ({ className, children, size, bold, variant, ...props }) => {
+const Typography = ({
+  className,
+  children,
+  size,
+  bold,
+  semi,
+  variant,
+  ...props
+}) => {
   const styles = {
     'typo--xl': size === SIZES.xl,
     'typo--l': size === SIZES.l,
     'typo--m': size === SIZES.m,
     'typo--s': size === SIZES.s,
     'typo--xs': size === SIZES.xs,
+    'typo--xxs': size === SIZES.xxs,
+    'typo--semi': semi,
     'typo--bold': bold,
     [`typo--text-${variant}`]: true,
   }
 
-  const classNames = cx([className], styles)
+  const classNames = cx(styles, [className])
   return (
     <span className={classNames} {...props}>
       {children}
@@ -52,5 +63,6 @@ Typography.L = SIZES.l
 Typography.M = SIZES.m
 Typography.S = SIZES.s
 Typography.XS = SIZES.xs
+Typography.XXS = SIZES.xxs
 
 export default Typography

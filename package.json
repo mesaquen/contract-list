@@ -17,7 +17,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false --coverage",
+    "test:watch": "react-scripts test --watch",
     "eject": "react-scripts eject",
     "prettier": "prettier --check src/**/*.{js,jsx,scss}",
     "prettier:fix": "prettier --write src/**/*.{js,jsx,scss}"

@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card matches snapshot on compact layout 1`] = `
+<DocumentFragment>
+  <div
+    class="card--container card--container-round"
+  >
+    <span>
+      sample
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Card matches snapshot on default layout 1`] = `
+<DocumentFragment>
+  <div
+    class="card--container card--container-round card--container-extra-padding"
+  >
+    <span>
+      sample
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Card matches snapshot on square edges 1`] = `
+<DocumentFragment>
+  <div
+    class="card--container card--container-extra-padding"
+  >
+    <span>
+      sample
+    </span>
+  </div>
+</DocumentFragment>
+`;

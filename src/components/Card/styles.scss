@@ -1,0 +1,14 @@
+.card--container {
+  margin-top: 0.75rem;
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  padding: 0.75rem;
+}
+
+.card--container-extra-padding {
+  padding: 1.5rem;
+}
+
+.card--container-round {
+  border-radius: var(--roundness);
+}

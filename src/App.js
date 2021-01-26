@@ -9,6 +9,7 @@ import { getSteps } from './logic/StepLogic'
 import IntlProvider from './lang/IntlProvider'
 import { useIntl, FormattedMessage } from 'react-intl'
 import InfoLabel from './components/InfoLabel'
+import ClickableArea from './components/ClickableArea'
 
 function AppContainer() {
   const intl = useIntl()
@@ -36,10 +37,12 @@ function AppContainer() {
           <Button primary>
             <FormattedMessage id="primary.button" />
           </Button>
-          <InfoLabel
-            label={fm('select.contract')}
-            info={fm('select.contract.info')}
-          />
+          <ClickableArea>
+            <InfoLabel
+              label={fm('select.contract')}
+              info={fm('select.contract.info')}
+            />
+          </ClickableArea>
         </Card>
       </div>
     </div>

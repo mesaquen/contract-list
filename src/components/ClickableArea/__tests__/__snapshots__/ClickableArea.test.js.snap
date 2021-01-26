@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClickableArea renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="clickableArea--container"
+    data-testid="clickablearea"
+  >
+    <span>
+      sample
+    </span>
+  </div>
+</DocumentFragment>
+`;

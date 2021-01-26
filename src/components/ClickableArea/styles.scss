@@ -1,0 +1,14 @@
+.clickableArea--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  border: 0.125rem dashed var(--primary-yellow);
+  border-radius: var(--roundness);
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    background-color: var(--white-hover);
+  }
+}

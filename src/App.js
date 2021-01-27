@@ -7,24 +7,24 @@ import Card from './components/Card'
 import StepHeader from './components/StepHeader'
 import { getSteps } from './logic/StepLogic'
 import IntlProvider from './lang/IntlProvider'
-import { useIntl, FormattedMessage } from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 import InfoLabel from './components/InfoLabel'
 import ClickableArea from './components/ClickableArea'
 import Checkbox from './components/Checkbox'
+import useI18n from './hooks/useI18n'
 
 function AppContainer() {
   const [checkValue, setValue] = useState(false)
-  const intl = useIntl()
-  const fm = id => intl.formatMessage({ id })
+  const { __ } = useI18n()
   const steps = getSteps().map(step => ({
     ...step,
-    title: fm(step.title),
-    subtitle: step.subtitle ? `(${fm(step.subtitle)})` : null,
+    title: __(step.title),
+    subtitle: step.subtitle ? `(${__(step.subtitle)})` : null,
   }))
   return (
     <div className="App">
       <div style={{ width: '80vw', margin: '0 auto' }}>
-        <Breadcrumbs data={[fm('merchant.label'), fm('new.application')]} />
+        <Breadcrumbs data={[__('merchant.label'), __('new.application')]} />
         <StepHeader data={steps} current={3} />
         <Card>
           <Typography>
@@ -41,13 +41,13 @@ function AppContainer() {
           </Button>
           <ClickableArea>
             <InfoLabel
-              label={fm('select.contract')}
-              info={fm('select.contract.info')}
+              label={__('select.contract')}
+              info={__('select.contract.info')}
             />
           </ClickableArea>
           <Checkbox
             name="template-checkbox"
-            label={fm('save.template.checkbox')}
+            label={__('save.template.checkbox')}
             checked={checkValue}
             onClick={next => setValue(next)}
           />

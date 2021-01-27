@@ -7,5 +7,6 @@
   "agents.buy.rate": "Agents Buy Rate",
   "optional": "Optional",
   "select.contract": "Select a contract type",
-  "select.contract.info": "Explanation on what is a Buy Rate Contract."
+  "select.contract.info": "Explanation on what is a Buy Rate Contract.",
+  "save.template.checkbox": "Save as a Template"
 }

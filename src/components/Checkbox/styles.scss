@@ -1,0 +1,19 @@
+.checkbox--container {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+.checkbox--icon-container {
+  border: 0.125rem solid var(--primary-yellow);
+  border-radius: 0.25rem;
+  padding: 0.125rem;
+  display: inline-flex;
+}
+
+.checkbox--icon {
+  color: var(--secondary-yellow);
+}
+
+.checkbox--label {
+  margin-left: 0.5rem;
+}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.scss'
 import Button from './components/Button'
 import Typography from './components/Typography'
@@ -10,8 +10,10 @@ import IntlProvider from './lang/IntlProvider'
 import { useIntl, FormattedMessage } from 'react-intl'
 import InfoLabel from './components/InfoLabel'
 import ClickableArea from './components/ClickableArea'
+import Checkbox from './components/Checkbox'
 
 function AppContainer() {
+  const [checkValue, setValue] = useState(false)
   const intl = useIntl()
   const fm = id => intl.formatMessage({ id })
   const steps = getSteps().map(step => ({
@@ -43,6 +45,12 @@ function AppContainer() {
               info={fm('select.contract.info')}
             />
           </ClickableArea>
+          <Checkbox
+            name="template-checkbox"
+            label={fm('save.template.checkbox')}
+            checked={checkValue}
+            onClick={next => setValue(next)}
+          />
         </Card>
       </div>
     </div>

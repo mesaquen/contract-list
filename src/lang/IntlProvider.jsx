@@ -3,7 +3,7 @@ import { IntlProvider as Provider } from 'react-intl'
 import Messages from './Messages'
 
 const IntlProvider = ({ children }) => {
-  const locale = navigator.language
+  const locale = navigator?.language
   const messages = Messages[locale] ?? Messages.default
   return (
     <Provider locale={locale} messages={messages}>

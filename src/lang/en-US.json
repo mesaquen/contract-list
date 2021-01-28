@@ -8,5 +8,10 @@
   "optional": "Optional",
   "select.contract": "Select a contract type",
   "select.contract.info": "Explanation on what is a Buy Rate Contract.",
-  "save.template.checkbox": "Save as a Template"
+  "save.template.checkbox": "Save as a Template",
+  "select.contract.type": "Select a contract type",
+  "buy.rate": "Buy Rate",
+  "buy.rate.info": "Explanation on what is a Buy Rate Contract.",
+  "profit.split": "Profit Split",
+  "profit.split.info": "Explanation about what is a Profit Split Contract."
 }

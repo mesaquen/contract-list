@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectContractType renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="contractType--container"
+    data-testid="select"
+  >
+    <div
+      class="infoLabel--container"
+    >
+      <span
+        class="typo--s typo--bold typo--text-secondary"
+      >
+        Select a contract type
+      </span>
+      <span
+        class="infoLabel--icon"
+        title="Explanation on what is a Buy Rate Contract."
+      >
+        <svg
+          class="infoIcon--icon"
+          fill="currentColor"
+          height="1.5rem"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 24 24"
+          width="1.5rem"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+          />
+        </svg>
+      </span>
+    </div>
+    <div
+      class="contractType--grid"
+    >
+      <div
+        class="clickableArea--container"
+      >
+        <div
+          class="infoLabel--container"
+          data-testid="select-rate-button"
+        >
+          <span
+            class="typo--s typo--bold typo--text-secondary"
+          >
+            Buy Rate
+          </span>
+          <span
+            class="infoLabel--icon"
+            title="Explanation on what is a Buy Rate Contract."
+          >
+            <svg
+              class="infoIcon--icon"
+              fill="currentColor"
+              height="1.5rem"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1.5rem"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div
+        class="clickableArea--container"
+      >
+        <div
+          class="infoLabel--container"
+          data-testid="select-profit-button"
+        >
+          <span
+            class="typo--s typo--bold typo--text-secondary"
+          >
+            Profit Split
+          </span>
+          <span
+            class="infoLabel--icon"
+            title="Explanation about what is a Profit Split Contract."
+          >
+            <svg
+              class="infoIcon--icon"
+              fill="currentColor"
+              height="1.5rem"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="1.5rem"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

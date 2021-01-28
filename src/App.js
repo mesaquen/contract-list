@@ -1,17 +1,13 @@
 import React, { useState } from 'react'
 import './App.scss'
-import Button from './components/Button'
-import Typography from './components/Typography'
 import Breadcrumbs from './components/Breadcrumb'
 import Card from './components/Card'
 import StepHeader from './components/StepHeader'
 import { getSteps } from './logic/StepLogic'
 import IntlProvider from './lang/IntlProvider'
-import { FormattedMessage } from 'react-intl'
-import InfoLabel from './components/InfoLabel'
-import ClickableArea from './components/ClickableArea'
 import Checkbox from './components/Checkbox'
 import useI18n from './hooks/useI18n'
+import SelectContractType from './components/SelectContractType'
 
 function AppContainer() {
   const [checkValue, setValue] = useState(false)
@@ -27,24 +23,7 @@ function AppContainer() {
         <Breadcrumbs data={[__('merchant.label'), __('new.application')]} />
         <StepHeader data={steps} current={3} />
         <Card>
-          <Typography>
-            <FormattedMessage id="greeting" />
-          </Typography>
-          <Button>
-            <FormattedMessage id="sample.button" />
-          </Button>
-          <Button raised>
-            <FormattedMessage id="raised.button" />
-          </Button>
-          <Button primary>
-            <FormattedMessage id="primary.button" />
-          </Button>
-          <ClickableArea>
-            <InfoLabel
-              label={__('select.contract')}
-              info={__('select.contract.info')}
-            />
-          </ClickableArea>
+          <SelectContractType />
           <Checkbox
             name="template-checkbox"
             label={__('save.template.checkbox')}

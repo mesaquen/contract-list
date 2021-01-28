@@ -1,0 +1,10 @@
+.contractType--container {
+  margin: 0.75rem 0;
+}
+
+.contractType--grid {
+  margin-top: 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.5rem;
+}

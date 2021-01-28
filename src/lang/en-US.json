@@ -13,5 +13,7 @@
   "buy.rate": "Buy Rate",
   "buy.rate.info": "Explanation on what is a Buy Rate Contract.",
   "profit.split": "Profit Split",
-  "profit.split.info": "Explanation about what is a Profit Split Contract."
+  "profit.split.info": "Explanation about what is a Profit Split Contract.",
+  "create.smart.contract": "Create a Smart Contract",
+  "apply.template": "Apply Template"
 }

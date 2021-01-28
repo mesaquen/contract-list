@@ -1,0 +1,13 @@
+.actionHeader--container {
+  display: flex;
+  align-items: center;
+}
+
+.actionHeader--label-container {
+  flex-grow: 1;
+  align-items: center;
+}
+
+.actionHeader--subtitle {
+  margin-left: 0.5rem;
+}

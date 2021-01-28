@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActionHeader renders correctly on compact layout 1`] = `
+<DocumentFragment>
+  <div
+    class="actionHeader--container"
+    data-testid="action-header"
+  >
+    <div
+      class="actionHeader--label-container"
+    >
+      <span
+        class="typo--m typo--bold typo--text-primary"
+      >
+        Title
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ActionHeader renders correctly with action 1`] = `
+<DocumentFragment>
+  <div
+    class="actionHeader--container"
+    data-testid="action-header"
+  >
+    <div
+      class="actionHeader--label-container"
+    >
+      <span
+        class="typo--xl typo--bold typo--text-primary"
+      >
+        Title
+      </span>
+    </div>
+    <button
+      class="button raised"
+      data-testid="action-header-button"
+    >
+      Action
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ActionHeader renders correctly with no action 1`] = `
+<DocumentFragment>
+  <div
+    class="actionHeader--container"
+    data-testid="action-header"
+  >
+    <div
+      class="actionHeader--label-container"
+    >
+      <span
+        class="typo--xl typo--bold typo--text-primary"
+      >
+        Title
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

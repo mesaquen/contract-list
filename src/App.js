@@ -9,6 +9,7 @@ import Checkbox from './components/Checkbox'
 import useI18n from './hooks/useI18n'
 import SelectContractType from './components/SelectContractType'
 import Separator from './components/Separator'
+import ActionHeader from './components/ActionHeader'
 
 function AppContainer() {
   const [checkValue, setValue] = useState(false)
@@ -22,8 +23,20 @@ function AppContainer() {
     <div className="App">
       <div style={{ width: '80vw', margin: '0 auto' }}>
         <Breadcrumbs data={[__('merchant.label'), __('new.application')]} />
+        <ActionHeader
+          title={__('new.application')}
+          buttonLabel={__('save.exit')}
+          onClick={() => null}
+        />
         <StepHeader data={steps} current={3} />
         <Card>
+          <ActionHeader
+            title={__('create.smart.contract')}
+            subtitle={`(${__('optional')})`}
+            buttonLabel={__('apply.template')}
+            onClick={() => null}
+            compact
+          />
           <SelectContractType />
           <Separator />
           <Checkbox

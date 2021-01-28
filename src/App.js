@@ -8,6 +8,7 @@ import IntlProvider from './lang/IntlProvider'
 import Checkbox from './components/Checkbox'
 import useI18n from './hooks/useI18n'
 import SelectContractType from './components/SelectContractType'
+import Separator from './components/Separator'
 
 function AppContainer() {
   const [checkValue, setValue] = useState(false)
@@ -24,6 +25,7 @@ function AppContainer() {
         <StepHeader data={steps} current={3} />
         <Card>
           <SelectContractType />
+          <Separator />
           <Checkbox
             name="template-checkbox"
             label={__('save.template.checkbox')}

@@ -12,6 +12,7 @@ import Separator from './components/Separator'
 import ActionHeader from './components/ActionHeader'
 import Snackbar from './components/Snackbar'
 import SnackbarStore from './mobx/SnackbarStore'
+import Typography from './components/Typography'
 
 function AppContainer() {
   const [checkValue, setValue] = useState(false)
@@ -37,7 +38,7 @@ function AppContainer() {
           onClick={() => null}
         />
         <StepHeader data={steps} current={3} />
-        <Card>
+        <Card className="contract--container">
           <ActionHeader
             title={__('create.smart.contract')}
             subtitle={`(${__('optional')})`}
@@ -45,8 +46,15 @@ function AppContainer() {
             onClick={showSnackbar}
             compact
           />
-          <SelectContractType />
           <Separator />
+          <SelectContractType />
+          <Typography variant="secondary" size={Typography.S} bold>
+            {__('applied.contracts')}
+          </Typography>
+          <Separator />
+          <Typography variant="secondary" size={Typography.S}>
+            {__('no.contract.warning')}
+          </Typography>
           <Checkbox
             name="template-checkbox"
             label={__('save.template.checkbox')}

@@ -10,6 +10,8 @@ import useI18n from './hooks/useI18n'
 import SelectContractType from './components/SelectContractType'
 import Separator from './components/Separator'
 import ActionHeader from './components/ActionHeader'
+import Snackbar from './components/Snackbar'
+import SnackbarStore from './mobx/SnackbarStore'
 
 function AppContainer() {
   const [checkValue, setValue] = useState(false)
@@ -19,6 +21,12 @@ function AppContainer() {
     title: __(step.title),
     subtitle: step.subtitle ? `(${__(step.subtitle)})` : null,
   }))
+
+  const showSnackbar = () => {
+    const options = { title: 'Success!', type: 'success' }
+    SnackbarStore.showSnackbar(options)
+    setTimeout(SnackbarStore.hideSnackbar, SnackbarStore.duration)
+  }
   return (
     <div className="App">
       <div style={{ width: '80vw', margin: '0 auto' }}>
@@ -34,7 +42,7 @@ function AppContainer() {
             title={__('create.smart.contract')}
             subtitle={`(${__('optional')})`}
             buttonLabel={__('apply.template')}
-            onClick={() => null}
+            onClick={showSnackbar}
             compact
           />
           <SelectContractType />
@@ -47,6 +55,7 @@ function AppContainer() {
           />
         </Card>
       </div>
+      <Snackbar store={SnackbarStore} />
     </div>
   )
 }

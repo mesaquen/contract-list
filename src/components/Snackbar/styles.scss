@@ -1,0 +1,88 @@
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    right: -10rem;
+  }
+
+  to {
+    opacity: 1;
+    right: 2rem;
+  }
+}
+
+@keyframes fade-out {
+  to {
+    opacity: 0;
+  }
+
+  from {
+    opacity: 1;
+  }
+}
+
+.snackbar--container {
+  display: flex;
+  width: 30rem;
+  background-color: var(--white);
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  border-radius: var(--roundness);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.snackbar--container-show {
+  animation-name: slide-in;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.snackbar--container-hide {
+  animation-name: fade-out;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+}
+
+.snackbar--icon-container {
+  display: flex;
+  flex-shrink: 0;
+  min-height: 4rem;
+  width: 4rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent-color);
+  color: var(--white);
+}
+
+.snackbar--icon-container-success {
+  background: var(--green-positive-verified);
+}
+
+.snackbar--icon-container-error {
+  background: var(--red-error);
+}
+
+.snackbar--content-container {
+  padding: 0.25rem;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.snackbar--title {
+  margin-bottom: 0.5rem;
+}
+
+.snackbar--title-success {
+  color: var(--green-positive-verified);
+}
+
+.snackbar--title-error {
+  color: var(--red-error);
+}
+
+.snackbar--action-container {
+  padding: 0.5rem;
+  color: var(--secondary-text-icons);
+}

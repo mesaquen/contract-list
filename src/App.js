@@ -13,6 +13,7 @@ import ActionHeader from './components/ActionHeader'
 import Snackbar from './components/Snackbar'
 import SnackbarStore from './mobx/SnackbarStore'
 import Typography from './components/Typography'
+import Input from './components/Input'
 
 function AppContainer() {
   const [checkValue, setValue] = useState(false)
@@ -62,6 +63,7 @@ function AppContainer() {
             onClick={next => setValue(next)}
           />
         </Card>
+        <Input label={__('processing.fee')} />
       </div>
       <Snackbar store={SnackbarStore} />
     </div>

@@ -1,0 +1,22 @@
+.inputnumber--input {
+  display: flex;
+  flex-grow: 1;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.inputnumber--left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--dividers-bg-bg-menu);
+  width: 2rem;
+  height: 2rem;
+  margin: 0;
+  border-radius: var(--roundness);
+}
+
+.input--text-right {
+  text-align: right;
+}

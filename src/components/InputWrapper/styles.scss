@@ -1,0 +1,39 @@
+.inputwrapper--content {
+  background: var(--white);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid var(--tertiary-field-borders);
+  border-radius: var(--roundness);
+  padding: 0.25rem;
+  height: 2rem;
+  transition: all 0.3s;
+  input {
+    font-size: 0.75rem;
+    color: var(--primary-main-titles);
+  }
+
+  &:focus-within {
+    box-shadow: 0 0 0 0.125rem var(--primary-yellow);
+    border-color: var(--secondary-yellow);
+  }
+}
+
+.inputwrapper--label-container {
+  margin: 0.25rem 0;
+}
+
+.inputwrapper--left {
+  flex-shrink: 0;
+  margin-right: 0.25rem;
+}
+
+.inputwrapper--center {
+  flex-grow: 1;
+  display: flex;
+}
+
+.inputwrapper--right {
+  flex-shrink: 0;
+  margin-left: 0.25rem;
+}

@@ -1,0 +1,16 @@
+.actionbar--container {
+  display: flex;
+}
+
+.actionbar--first {
+  display: flex;
+  flex-grow: 1;
+}
+
+.actionbar--first-center {
+  justify-content: center;
+}
+
+.actionbar--last {
+  margin-left: 1.5rem;
+}

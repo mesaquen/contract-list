@@ -10,17 +10,20 @@ Contract list web app based on ReactJS (create-react-app)
 # How to run
 
 1. Clone the repo
+
 ```sh
 git clone https://github.com/mesaquen/contract-list.git
 ```
 
 2. Install the dependencies
+
 ```sh
 # at /contract-list directory
 yarn install
 ```
 
 3. Start the server
+
 ```sh
 yarn start
 ```
@@ -32,3 +35,8 @@ The application is made available at **http://localhost:3000**
 ```
 yarn test
 ```
+
+## TODO
+
+- [ ] Implement virtualized listing for better handling of large lists
+- [ ] SnackbarController for handling multiple calls to Snackbar

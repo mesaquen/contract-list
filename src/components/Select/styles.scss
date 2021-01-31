@@ -1,0 +1,25 @@
+.selectmodal--container {
+  padding: 1rem;
+  z-index: 99999999999;
+}
+
+.selectmodal--container-border {
+  border-radius: var(--roundness);
+  border: 1px solid var(--tertiary-field-borders);
+}
+
+.selectmodal--list {
+  max-height: 15rem;
+  list-style-type: none;
+  padding: 0;
+  overflow-y: auto;
+}
+
+.selectmodal--list-item {
+  cursor: pointer;
+  padding: 0.5rem 0.25rem;
+
+  &:hover {
+    background: var(--white-hover);
+  }
+}

@@ -13,10 +13,11 @@ import ActionHeader from './components/ActionHeader'
 import Snackbar from './components/Snackbar'
 import SnackbarStore from './mobx/SnackbarStore'
 import Typography from './components/Typography'
-import Input from './components/Input'
+import Select from './components/Select'
 
 function AppContainer() {
   const [checkValue, setValue] = useState(false)
+  const [selectValue, setSelectValue] = useState()
   const { __ } = useI18n()
   const steps = getSteps().map(step => ({
     ...step,
@@ -62,8 +63,17 @@ function AppContainer() {
             checked={checkValue}
             onClick={next => setValue(next)}
           />
+          <Select
+            placeholder="thos is the placeholder"
+            value={selectValue}
+            dataTextField="description"
+            label={__('apply.templaaate')}
+            searchLabel={__('apply')}
+            searchPlaceholder={__('seach.placeholder')}
+            onChange={setSelectValue}
+            onSearch={value => console.log(value)}
+          />
         </Card>
-        <Input label={__('processing.fee')} />
       </div>
       <Snackbar store={SnackbarStore} />
     </div>

@@ -3,10 +3,17 @@ import cx from 'classnames'
 import './styles.scss'
 import Typography from '../Typography'
 
-const InputWrapper = ({ label, left, right, className, children }) => {
+const InputWrapper = ({
+  label,
+  left,
+  right,
+  className,
+  children,
+  ...props
+}) => {
   const classNames = cx('inputwrapper--container', className)
   return (
-    <div className={classNames}>
+    <div className={classNames} {...props}>
       {label && (
         <div className="inputwrapper--label-container">
           <Typography

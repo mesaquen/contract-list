@@ -17,6 +17,10 @@
     box-shadow: 0 0 0 0.125rem var(--primary-yellow);
     border-color: var(--secondary-yellow);
   }
+
+  ::placeholder {
+    color: var(--placeholders-inactive);
+  }
 }
 
 .inputwrapper--label-container {

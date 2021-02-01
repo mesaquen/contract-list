@@ -15,7 +15,7 @@ Contract list web app based on ReactJS (create-react-app)
 git clone https://github.com/mesaquen/contract-list.git
 ```
 
-2. Install the dependencies
+2. Install the dependenciese
 
 ```sh
 # at /contract-list directory

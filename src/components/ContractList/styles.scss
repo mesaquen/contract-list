@@ -1,0 +1,13 @@
+.contractlist--item {
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--dividers-bg-bg-menu);
+}
+
+.contractlist--container {
+  :nth-child(even) {
+    background-color: var(--white-hover);
+  }
+  :last-child {
+    border-bottom: none;
+  }
+}

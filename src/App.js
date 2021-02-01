@@ -14,6 +14,8 @@ import Snackbar from './components/Snackbar'
 import SnackbarStore from './mobx/SnackbarStore'
 import Typography from './components/Typography'
 import Select from './components/Select'
+import ContractList from './components/ContractList'
+import { CONTRACT_TYPES } from './components/constants/contracts'
 
 function AppContainer() {
   const [checkValue, setValue] = useState(false)
@@ -54,24 +56,20 @@ function AppContainer() {
             {__('applied.contracts')}
           </Typography>
           <Separator />
-          <Typography variant="secondary" size={Typography.S}>
-            {__('no.contract.warning')}
-          </Typography>
-          <Checkbox
-            name="template-checkbox"
-            label={__('save.template.checkbox')}
-            checked={checkValue}
-            onClick={next => setValue(next)}
-          />
-          <Select
-            placeholder="thos is the placeholder"
-            value={selectValue}
-            dataTextField="description"
-            label={__('apply.templaaate')}
-            searchLabel={__('apply')}
-            searchPlaceholder={__('seach.placeholder')}
-            onChange={setSelectValue}
-            onSearch={value => console.log(value)}
+
+          <ContractList
+            data={[
+              {
+                id: '1',
+                description: 'Conttract #1',
+                type: CONTRACT_TYPES.BUY_RATE,
+              },
+              {
+                id: '2',
+                description: 'Conttract Profit #2',
+                type: CONTRACT_TYPES.PROFIT_SPLIT,
+              },
+            ]}
           />
         </Card>
       </div>

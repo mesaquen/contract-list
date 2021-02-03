@@ -34,7 +34,7 @@ function AppContainer() {
   }
   return (
     <div className="App">
-      <div style={{ width: '80vw', margin: '0 auto' }}>
+      <div style={{ width: '48rem', margin: '0 auto' }}>
         <Breadcrumbs data={[__('merchant.label'), __('new.application')]} />
         <ActionHeader
           title={__('new.application')}

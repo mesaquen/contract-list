@@ -1,13 +1,22 @@
 .contractlist--item {
+  display: flex;
   padding: 0.5rem;
   border-bottom: 1px solid var(--dividers-bg-bg-menu);
+
+  > :last-child {
+    margin-left: 0.5rem;
+  }
 }
 
 .contractlist--container {
-  :nth-child(even) {
+  > :nth-child(even) {
     background-color: var(--white-hover);
   }
-  :last-child {
+  > :last-child {
     border-bottom: none;
   }
+}
+
+.contractlist--item-title {
+  flex-grow: 1;
 }

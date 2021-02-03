@@ -1,0 +1,40 @@
+.modal--fog {
+  background-color: #000000b3;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 999;
+}
+
+.modal--container {
+  padding: 2rem;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  display: inline-flex;
+  flex-grow: 0;
+  min-width: 25rem;
+  min-height: 30rem;
+  flex-direction: column;
+  background-color: var(--white);
+  border-radius: var(--roundness);
+  box-shadow: var(--shadow);
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.modal--title {
+  margin-bottom: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+.modal--content-container {
+  flex-grow: 1;
+}
+
+.modal--actions {
+}

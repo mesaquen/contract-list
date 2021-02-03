@@ -5,7 +5,6 @@ import Card from './components/Card'
 import StepHeader from './components/StepHeader'
 import { getSteps } from './logic/StepLogic'
 import IntlProvider from './lang/IntlProvider'
-import Checkbox from './components/Checkbox'
 import useI18n from './hooks/useI18n'
 import SelectContractType from './components/SelectContractType'
 import Separator from './components/Separator'
@@ -13,13 +12,10 @@ import ActionHeader from './components/ActionHeader'
 import Snackbar from './components/Snackbar'
 import SnackbarStore from './mobx/SnackbarStore'
 import Typography from './components/Typography'
-import Select from './components/Select'
 import ContractList from './components/ContractList'
 import { CONTRACT_TYPES } from './components/constants/contracts'
 
 function AppContainer() {
-  const [checkValue, setValue] = useState(false)
-  const [selectValue, setSelectValue] = useState()
   const { __ } = useI18n()
   const steps = getSteps().map(step => ({
     ...step,

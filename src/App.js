@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.scss'
 import Breadcrumbs from './components/Breadcrumb'
 import Card from './components/Card'
@@ -15,14 +15,22 @@ import Typography from './components/Typography'
 import ContractList from './components/ContractList'
 import { CONTRACT_TYPES } from './components/constants/contracts'
 import Button from './components/Button'
+import { observer } from 'mobx-react-lite'
+import ContractStore from './mobx/ContractStore'
+import { fetchContracts } from './logic/ContractLogic'
 
-function AppContainer() {
+const AppContainer = observer(() => {
+  const { contracts } = ContractStore
   const { __ } = useI18n()
   const steps = getSteps().map(step => ({
     ...step,
     title: __(step.title),
     subtitle: step.subtitle ? `(${__(step.subtitle)})` : null,
   }))
+
+  useEffect(() => {
+    fetchContracts()
+  }, [])
 
   const showSnackbar = () => {
     const options = { title: 'Success!', type: 'success' }
@@ -54,27 +62,13 @@ function AppContainer() {
           </Typography>
           <Separator />
 
-          <ContractList
-            data={[
-              {
-                id: '1',
-                description: 'Conttract #1',
-                type: CONTRACT_TYPES.BUY_RATE,
-              },
-              {
-                id: '2',
-                description: 'Conttract Profit #2',
-                type: CONTRACT_TYPES.PROFIT_SPLIT,
-              },
-            ]}
-          />
-          <Button disabled>sample</Button>
+          <ContractList data={contracts} />
         </Card>
       </div>
       <Snackbar store={SnackbarStore} />
     </div>
   )
-}
+})
 
 function App() {
   return (

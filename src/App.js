@@ -14,6 +14,7 @@ import SnackbarStore from './mobx/SnackbarStore'
 import Typography from './components/Typography'
 import ContractList from './components/ContractList'
 import { CONTRACT_TYPES } from './components/constants/contracts'
+import Button from './components/Button'
 
 function AppContainer() {
   const { __ } = useI18n()
@@ -67,6 +68,7 @@ function AppContainer() {
               },
             ]}
           />
+          <Button disabled>sample</Button>
         </Card>
       </div>
       <Snackbar store={SnackbarStore} />

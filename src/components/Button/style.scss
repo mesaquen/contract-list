@@ -37,3 +37,15 @@
     border-color: var(--primary-hover);
   }
 }
+
+.disabled {
+  background: var(--dividers-bg-bg-menu);
+  color: var(--tertiary-field-borders);
+  border-color: var(--disabled-border);
+  box-shadow: none;
+  &:hover {
+    background-color: var(--dividers-bg-bg-menu);
+    cursor: unset;
+    box-shadow: none;
+  }
+}

@@ -14,6 +14,7 @@ import { observer } from 'mobx-react-lite'
 import ContractListing from './pages/ContractsListing'
 import ContractForm from './pages/ContractForm'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+
 const AppContainer = observer(() => {
   const { __ } = useI18n()
   const steps = getSteps().map(step => ({

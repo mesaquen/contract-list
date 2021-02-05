@@ -17,6 +17,7 @@ const ActionBar = ({ data, className, ...props }) => {
       onClick={item.action}
       raised={options.raised}
       primary={options.primary}
+      disabled={item.disabled}
     >
       {item.title}
     </Button>

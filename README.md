@@ -7,7 +7,7 @@ Contract list web app based on ReactJS (create-react-app)
 - [NodeJS](https://nodejs.org/en/download/)
 - [Yarn](https://classic.yarnpkg.com/en/)
 
-# How to run
+# How to run (backend)
 
 1. Clone the repo
 
@@ -15,10 +15,10 @@ Contract list web app based on ReactJS (create-react-app)
 git clone https://github.com/mesaquen/contract-list.git
 ```
 
-2. Install the dependenciese
+2. Install the backend dependenciese
 
 ```sh
-# at /contract-list directory
+# at /contract-list/contract-list-bff directory
 yarn install
 ```
 
@@ -28,7 +28,24 @@ yarn install
 yarn start
 ```
 
-The application is made available at **http://localhost:3000**
+The application backend is made available at **http://localhost:3001**
+
+# How to run (frontend)
+
+1. Install the frontend dependenciese
+
+```sh
+# at /contract-list/contract-list-bff directory
+yarn install
+```
+
+2. Start the server
+
+```sh
+yarn start
+```
+
+The application frontend is made available at **http://localhost:3000**
 
 ## Running the tests
 

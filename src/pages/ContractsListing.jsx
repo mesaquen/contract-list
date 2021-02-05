@@ -30,6 +30,7 @@ const ContractListing = observer(() => {
   const goToForm = type => history.push(`/contract?type=${type}`)
   const handleBuyRate = () => goToForm(CONTRACT_TYPES.BUY_RATE)
   const handleProfitSplit = () => goToForm(CONTRACT_TYPES.PROFIT_SPLIT)
+  const handleEdit = id => history.push(`/contract/${id}`)
   return (
     <>
       <ActionHeader
@@ -46,8 +47,7 @@ const ContractListing = observer(() => {
         {__('applied.contracts')}
       </Typography>
       <Separator />
-
-      <ContractList data={contracts} />
+      <ContractList data={contracts} onEdit={handleEdit} />
       <Separator />
       <ActionBar data={actions} />
     </>

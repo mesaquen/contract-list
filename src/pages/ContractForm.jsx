@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams, useLocation } from 'react-router-dom'
-const useQuery = () => new URLSearchParams(useLocation().search)
+import useQuery from '../hooks/useQuery'
+
 const ContractForm = () => {
   const params = useParams()
 

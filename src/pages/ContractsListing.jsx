@@ -9,10 +9,14 @@ import Separator from '../components/Separator'
 import ContractList from '../components/ContractList'
 import ActionHeader from '../components/ActionHeader'
 import ActionBar from '../components/ActionBar'
+import { CONTRACT_TYPES } from '../components/constants/contracts'
+import { useHistory } from 'react-router-dom'
 
 const ContractListing = observer(() => {
   const { contracts } = ContractStore
   const { __ } = useI18n()
+  const history = useHistory()
+
   useEffect(() => {
     fetchContracts()
   }, [])
@@ -22,6 +26,10 @@ const ContractListing = observer(() => {
     { title: __('save.exit') },
     { title: __('skip.submit') },
   ]
+
+  const goToForm = type => history.push(`/contract?type=${type}`)
+  const handleBuyRate = () => goToForm(CONTRACT_TYPES.BUY_RATE)
+  const handleProfitSplit = () => goToForm(CONTRACT_TYPES.PROFIT_SPLIT)
   return (
     <>
       <ActionHeader
@@ -30,7 +38,10 @@ const ContractListing = observer(() => {
         compact
       />
       <Separator />
-      <SelectContractType />
+      <SelectContractType
+        onClickBuyRate={handleBuyRate}
+        onClickProfitSplit={handleProfitSplit}
+      />
       <Typography variant="secondary" size={Typography.S} bold>
         {__('applied.contracts')}
       </Typography>

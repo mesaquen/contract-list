@@ -1,4 +1,4 @@
 export const CONTRACT_TYPES = {
-  BUY_RATE: 'buy rate',
-  PROFIT_SPLIT: 'profit split',
+  BUY_RATE: 'buy',
+  PROFIT_SPLIT: 'profit',
 }

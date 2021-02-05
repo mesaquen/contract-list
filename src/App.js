@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import './App.scss'
 import Breadcrumbs from './components/Breadcrumb'
 import Card from './components/Card'
@@ -6,21 +6,15 @@ import StepHeader from './components/StepHeader'
 import { getSteps } from './logic/StepLogic'
 import IntlProvider from './lang/IntlProvider'
 import useI18n from './hooks/useI18n'
-import SelectContractType from './components/SelectContractType'
 import Separator from './components/Separator'
 import ActionHeader from './components/ActionHeader'
 import Snackbar from './components/Snackbar'
 import SnackbarStore from './mobx/SnackbarStore'
-import Typography from './components/Typography'
-import ContractList from './components/ContractList'
-import { CONTRACT_TYPES } from './components/constants/contracts'
-import Button from './components/Button'
 import { observer } from 'mobx-react-lite'
-import ContractStore from './mobx/ContractStore'
-import { fetchContracts } from './logic/ContractLogic'
-
+import ContractListing from './pages/ContractsListing'
+import ContractForm from './pages/ContractForm'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 const AppContainer = observer(() => {
-  const { contracts } = ContractStore
   const { __ } = useI18n()
   const steps = getSteps().map(step => ({
     ...step,
@@ -28,15 +22,6 @@ const AppContainer = observer(() => {
     subtitle: step.subtitle ? `(${__(step.subtitle)})` : null,
   }))
 
-  useEffect(() => {
-    fetchContracts()
-  }, [])
-
-  const showSnackbar = () => {
-    const options = { title: 'Success!', type: 'success' }
-    SnackbarStore.showSnackbar(options)
-    setTimeout(SnackbarStore.hideSnackbar, SnackbarStore.duration)
-  }
   return (
     <div className="App">
       <div style={{ width: '48rem', margin: '0 auto' }}>
@@ -48,21 +33,14 @@ const AppContainer = observer(() => {
         />
         <StepHeader data={steps} current={3} />
         <Card className="contract--container">
-          <ActionHeader
-            title={__('create.smart.contract')}
-            subtitle={`(${__('optional')})`}
-            buttonLabel={__('apply.template')}
-            onClick={showSnackbar}
-            compact
-          />
-          <Separator />
-          <SelectContractType />
-          <Typography variant="secondary" size={Typography.S} bold>
-            {__('applied.contracts')}
-          </Typography>
-          <Separator />
-
-          <ContractList data={contracts} />
+          <Switch>
+            <Route path="/contract/:id?">
+              <ContractForm />
+            </Route>
+            <Route path="/">
+              <ContractListing />
+            </Route>
+          </Switch>
         </Card>
       </div>
       <Snackbar store={SnackbarStore} />
@@ -72,9 +50,11 @@ const AppContainer = observer(() => {
 
 function App() {
   return (
-    <IntlProvider>
-      <AppContainer />
-    </IntlProvider>
+    <Router>
+      <IntlProvider>
+        <AppContainer />
+      </IntlProvider>
+    </Router>
   )
 }
 

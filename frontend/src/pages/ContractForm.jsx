@@ -1,28 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ActionBar from '../components/ActionBar'
 import ActionHeader from '../components/ActionHeader'
 import Checkbox from '../components/Checkbox'
 import IconMessage from '../components/IconMessage'
 import Separator from '../components/Separator'
+import TemplatePickerModal from '../components/TemplatePickerModal'
 import useI18n from '../hooks/useI18n'
 import useQuery from '../hooks/useQuery'
 
 const ContractForm = () => {
+  const [openTemplateModal, setOpenTemplateModal] = useState(false)
   const params = useParams()
   const { __ } = useI18n()
 
   const query = useQuery()
 
-  const handleApplyTemplate = () => console.log('apply template')
+  const handleApplyTemplate = () => setOpenTemplateModal(true)
+  const closeTemplateModal = () => setOpenTemplateModal(false)
+
   const actions = [
     {
-      title: __('cancel')
+      title: __('cancel'),
     },
     {
       title: __('add.to.application'),
-      disabled: true
-    }
+      disabled: true,
+    },
   ]
   return (
     <>
@@ -35,9 +39,13 @@ const ContractForm = () => {
       />
       <Separator />
       <IconMessage message={__('buy.rate.warning')} />
-      <Checkbox label={__('save.template.checkbox')}/>
+      <Checkbox label={__('save.template.checkbox')} />
       <Separator />
       <ActionBar data={actions} />
+      <TemplatePickerModal
+        open={openTemplateModal}
+        onClose={closeTemplateModal}
+      />
     </>
   )
 }

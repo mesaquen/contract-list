@@ -8,6 +8,7 @@ import './styles.scss'
 
 const SelectModal = ({
   data,
+  selected,
   dataFieldText,
   dataFieldId,
   searchLabel,
@@ -37,9 +38,12 @@ const SelectModal = ({
   }
 
   const renderItem = (item, index) => {
+    const listItemStyle = cx('selectmodal--list-item', {
+      'selectmodal--list-item-selected': item.id === selected,
+    })
     return (
       <li key={item.description} onClick={() => handleSelect(index)}>
-        <div className="selectmodal--list-item">
+        <div className={listItemStyle}>
           <Typography size={Typography.S} variant="secondary" bold>
             {data[index]?.[dataFieldText]}
           </Typography>

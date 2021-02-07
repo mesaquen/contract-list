@@ -1,4 +1,5 @@
 import Store from '../mobx/TemplateStore'
+import logger from '../utils/logger'
 export const fetchTemplates = async () => {
   try {
     const nextTemplates = await (
@@ -6,6 +7,6 @@ export const fetchTemplates = async () => {
     ).json()
     Store.setTemplates(nextTemplates)
   } catch (err) {
-    console.error(err)
+    logger.error(err)
   }
 }

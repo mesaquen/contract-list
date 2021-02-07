@@ -11,6 +11,7 @@ import ActionHeader from '../components/ActionHeader'
 import ActionBar from '../components/ActionBar'
 import { CONTRACT_TYPES } from '../components/constants/contracts'
 import { useHistory } from 'react-router-dom'
+import logger from '../utils/logger'
 
 const ContractListing = observer(() => {
   const { contracts } = ContractStore
@@ -31,7 +32,7 @@ const ContractListing = observer(() => {
   const handleBuyRate = () => goToForm(CONTRACT_TYPES.BUY_RATE)
   const handleProfitSplit = () => goToForm(CONTRACT_TYPES.PROFIT_SPLIT)
   const handleEdit = id => history.push(`/contract/${id}`)
-  const handleDelete = id => console.log('Deleting', id)
+  const handleDelete = id => logger.info(`Deleting item ${id}`)
   return (
     <>
       <ActionHeader

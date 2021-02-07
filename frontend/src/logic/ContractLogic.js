@@ -1,4 +1,5 @@
 import ContractStore from '../mobx/ContractStore'
+import logger from '../utils/logger'
 export const fetchContracts = async () => {
   try {
     const nextContracts = await (
@@ -6,6 +7,6 @@ export const fetchContracts = async () => {
     ).json()
     ContractStore.setContracts(nextContracts)
   } catch (err) {
-    console.error(err)
+    logger.error(err)
   }
 }

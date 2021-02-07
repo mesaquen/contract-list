@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useHistory, useParams } from 'react-router-dom'
 import ActionBar from '../components/ActionBar'
 import ActionHeader from '../components/ActionHeader'
 import Checkbox from '../components/Checkbox'
@@ -15,6 +15,7 @@ const ContractForm = () => {
   const { __ } = useI18n()
 
   const query = useQuery()
+  const history = useHistory()
 
   const handleApplyTemplate = () => setOpenTemplateModal(true)
   const closeTemplateModal = () => setOpenTemplateModal(false)
@@ -22,6 +23,7 @@ const ContractForm = () => {
   const actions = [
     {
       title: __('cancel'),
+      action: history.goBack,
     },
     {
       title: __('add.to.application'),

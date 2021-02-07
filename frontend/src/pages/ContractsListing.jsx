@@ -31,6 +31,7 @@ const ContractListing = observer(() => {
   const handleBuyRate = () => goToForm(CONTRACT_TYPES.BUY_RATE)
   const handleProfitSplit = () => goToForm(CONTRACT_TYPES.PROFIT_SPLIT)
   const handleEdit = id => history.push(`/contract/${id}`)
+  const handleDelete = id => console.log('Deleting', id)
   return (
     <>
       <ActionHeader
@@ -47,7 +48,11 @@ const ContractListing = observer(() => {
         {__('applied.contracts')}
       </Typography>
       <Separator />
-      <ContractList data={contracts} onEdit={handleEdit} />
+      <ContractList
+        data={contracts}
+        onEdit={handleEdit}
+        onDelete={handleDelete}
+      />
       <Separator />
       <ActionBar data={actions} />
     </>

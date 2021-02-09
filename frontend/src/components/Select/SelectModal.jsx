@@ -39,7 +39,7 @@ const SelectModal = ({
 
   const renderItem = (item, index) => {
     const listItemStyle = cx('selectmodal--list-item', {
-      'selectmodal--list-item-selected': item.id === selected,
+      'selectmodal--list-item-selected': selected && item.id === selected,
     })
     return (
       <li key={item.description} onClick={() => handleSelect(index)}>

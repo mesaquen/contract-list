@@ -1,6 +1,18 @@
+.select--container {
+  position: relative;
+}
+
+.select--modal-positioner {
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+}
+
 .selectmodal--container {
   padding: 1rem;
   z-index: 99999999999;
+  background-color: var(--white);
 }
 
 .selectmodal--container-border {
